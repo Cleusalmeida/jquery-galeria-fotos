@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhando com jQuery</title> <!--nome da aba no navegador-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header> <!--cabeçalho-->
+    <h1>Galeria de fotos</h1> <!--título do projeto-->
+    <button type="button"> Nova imagem +</button> <!--botão para adicionar mais imagens-->
+  </header>
+  <form> <!--formulário-->
+    <h2>Inserir nova imagem</h2> <!--subtítulo da seção-->
+    <input type="url" id="endereco-imagem-nova" required placeholder="url da imagem" /> <!--campo-->
+    <button type="submit">Adicionar</button> <!--botão para adicionar--> 
+    <button type="reset" id="botao-cancelar">Cancelar</button> <!--botão para excluir-->
+  </form>
+  <ul> <!--lista não ordenada-->
+    <li>
+      <img src="./foto1.jpg" alt="Pintura de um gato" /> <!--primeira imagem-->
+      <div class="overlay-imagem-link">
+        <a href="./foto1.jpg" title="Ver imagem em tamanho real" target="_blank"><!--link da imagem-->
+          Ver imagem em tamanho real
+        </a>
+      </div>
+    </li>
+    <li>
+      <img src="./foto2.jpg" alt="Foto de um ganso" />
+      <div class="overlay-imagem-link">
+      <a href="./foto2.jpg" title="Ver imagem em tamanho real" target="_blank">
+        Ver imagem em tamanho real
+        </a>
+      </div>
+    </li>
+    <li>
+      <img src="./foto3.jpg" alt="Foto de cachorros">
+      <div class="overlay-imagem-link">
+        <a href="./foto3.jpg" title="Ver imagem em tamanho real" target="_blank">
+          Ver imagem em tamanho real
+        </a>
+      </div>
+    </li>
+    <li>
+      <img src="./foto4.jpg" alt="Foto de uma orquídea">
+      <div class="overlay-imagem-link">
+        <a href="./foto4.jpg" title="Ver imagem em tamanho real" target="_blank">
+          Ver imagem em tamanho real
+        </a>
+      </div>
+    </li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

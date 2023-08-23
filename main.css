@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto, sans-serif;
+}
+header {
+    background-color:#b599ed ; /*cor de fundo do cabeçalho*/
+    padding: 16px 0; /*espaçamento no topo e na lateral*/
+    color: black; /*cor da fonte*/
+    display: flex; /*deixa o botão ao lado do título*/
+    border-bottom: 16px solid #6d3fc9; /*borda na parte inferior do cabeçalho, largura da borda (16px)*/
+    justify-content: center; /*centraliza tudo do cabaçalho*/
+    text-transform: uppercase; /* deixa a fonte do cabeçalho toda em maiúscula*/
+    font-style: italic; /*deixa a fonte em itálico*/
+}
+header button { /*botão que está no cabeçalho*/
+    margin-left: 30px; /* cria uma distância entre o cabeçalho e o botão*/
+}
+form { /*formulário*/
+    background-color: #c4d9cb; /*cor de fundo do formulário*/
+    padding: 24px 0; /*espaçamento interno no topo e na parte inferior (24px) e (0)*/
+    text-align: center; /*deixa o texto do formulário no centro*/
+    display: none; /*deixa o formulário oculto*/
+}
+input, button { /*campo e botões*/
+    padding: 8px; /*espçamento interno do campo e dos botões*/
+}
+button { /*botões*/
+    background-color: #21d021; /*cor dos botões*/
+    /*border: none;*/
+    cursor: pointer; /*a cetinha do mouse*/
+    font-weight: bold; /*fonte dos botões em negrito*/
+    text-transform: uppercase; /*deixa a fonte dos botões maiúsculas*/
+    color: black; /*cor da fonte dos botões*/
+}
+form h2 { /*título da seção ou subtítulo*/
+    margin-bottom: 16px; /*cria uma distância entre o subtítulo e os botões*/
+}
+input { /*campo*/
+    background-color: rgb(143, 238, 232); /*cor do campo*/
+}
+#botao-cancelar {
+    background-color: red; /*cor do botão cancelar*/
+}
+ul { /*lista não ordenada*/
+    display: flex; /*colocar uma foto ao lado da outra*/
+    flex-wrap: wrap; /*cria uma nova linha de imagens em baixo quando não cabe mais na mesma linha*/
+}
+ul li { /*vamos limitar o tamanho das imagens*/
+    max-width: 25%; /*largura das imagens*/
+    list-style: none; /*tira uma bolinha que fica na foto indicando a li*/
+    position: relative;
+    max-height: 400px; /*altura do elemento linha 'ver imagem no tamanho real'*/
+    overflow-y: hidden; /*oculta a parte da imagem que está maior que as outras*/
+}
+ul li img {
+    width: 100%; /*largura das imagens*/
+}
+.overlay-imagem-link {
+    padding: 18px; /*espaçamento dos links*/
+    background-color: rgba(0, 0, 0, 0.7); /*usamos o rgba para dar transparência na cor*/
+    position: absolute; /*coloca o link no canto inferior do li*/
+    bottom: 0; /*ficar na extremidade*/
+    left: 0;
+    width: 100%; /*largura*/
+    opacity: 0; /*ocultar a barra de 'ver imagem em tamanho real'*/
+    transition: all ease .5s;
+}
+.overlay-imagem-link a {
+    color: #fff; /*cor do testo do link*/
+    text-decoration: none; /*tira o 'anderline' */ 
+}
+ul li:hover .overlay-imagem-link {
+    opacity: 1; /*aparece a barra de 'ver imagem' quando passa o mouse pela imagem*/
+}
